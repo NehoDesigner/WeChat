@@ -1,0 +1,15 @@
+body {
+	font-size: 62.5%;
+	/*10 ÷ 16 × 100% = 62.5%*/
+	background-color: #fbf9fe;
+}
+.header{	
+	position: fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+}
+.container{
+	margin-top:46px;
+	overflow: scroll;
+}
