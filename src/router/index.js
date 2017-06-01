@@ -37,5 +37,32 @@ export const routes = [{
 		meta: {
 			routeLevel: 1
 		}
+	},{
+		name: 'contact',
+		path: '/contact',
+		component: (resolve) => {
+			require(['../components/pages/contact.vue'], resolve)
+		},
+		meta: {
+			routeLevel: 1
+		}
+	},{
+		name: 'explore',
+		path: '/explore',
+		component: (resolve) => {
+			require(['../components/pages/explore.vue'], resolve)
+		},
+		meta: {
+			routeLevel: 1
+		}
+	},{
+		name: 'me',
+		path: '/me',
+		component: (resolve) => {
+			require(['../components/pages/me.vue'], resolve)
+		},
+		meta: {
+			routeLevel: 1
+		}
 	}]
 }];

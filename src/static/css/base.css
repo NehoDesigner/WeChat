@@ -3,13 +3,32 @@ body {
 	/*10 ÷ 16 × 100% = 62.5%*/
 	background-color: #fbf9fe;
 }
-.header{	
+
+.header {
 	position: fixed;
-	top:0px;
-	left:0px;
-	width:100%;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 99;
 }
-.container{
-	margin-top:46px;
+
+.nav {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 99;
+}
+
+.container {
+	margin: 46px 0px 53px 0px;
 	overflow: scroll;
+}
+
+.text-r {
+	text-align: right;
+}
+
+.text-l {
+	text-align: left;
 }

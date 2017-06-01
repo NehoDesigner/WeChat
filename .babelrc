@@ -1,14 +1,43 @@
 {
   "presets": [
-    ["env", { "modules": false }],
-    "stage-2"
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "stage-2",
+    [
+      "es2015",
+      {
+        "modules": false
+      }
+    ]
   ],
-  "plugins": ["transform-runtime"],
+  "plugins": [
+    [
+      "component",
+      [
+        {
+          "libraryName": "mint-ui",
+          "style": true
+        }
+      ]
+    ],
+    [
+      "transform-runtime"
+    ]
+  ],
   "comments": false,
   "env": {
     "test": {
-      "presets": ["env", "stage-2"],
-      "plugins": [ "istanbul" ]
+      "presets": [
+        "env",
+        "stage-2"
+      ],
+      "plugins": [
+        "istanbul"
+      ]
     }
   }
 }

@@ -32,6 +32,12 @@ import './static/css/base.css';
 //vuex
 import store from './vuex'
 
+//mint-ui
+import { IndexList, IndexSection, Cell } from 'mint-ui';
+Vue.component(IndexList.name, IndexList);
+Vue.component(IndexSection.name, IndexSection);
+Vue.component(Cell.name, Cell);
+
 /* eslint-disable no-new */
 window.ROOT_APP = new Vue({
 	router,
