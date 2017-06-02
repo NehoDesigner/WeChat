@@ -38,7 +38,7 @@ Vue.component(IndexList.name, IndexList);
 Vue.component(IndexSection.name, IndexSection);
 Vue.component(Cell.name, Cell);
 //vux
-import  { ConfirmPlugin } from 'vux'
+import { ConfirmPlugin } from 'vux'
 Vue.use(ConfirmPlugin)
 /* eslint-disable no-new */
 window.ROOT_APP = new Vue({
@@ -54,6 +54,14 @@ window.ROOT_APP = new Vue({
 			localStorage.clear();
 			this.$store.dispatch('loginStatus', false);
 			this.goto('/');
+		},
+		back: function() {
+			if(this.$route.path == '/chat' || this.$route.path == '/contact' || this.$route.path == '/explore' || this.$route.path == '/me' || this.$route.path == '/') {
+				return false
+			} else {
+				this.$router.go('-1');
+				return true;
+			}
 		}
 	},
 	created: function() {
@@ -63,4 +71,14 @@ window.ROOT_APP = new Vue({
 		}
 	},
 	render: h => h(App)
-}).$mount('#app-box')
+}).$mount('#app-box');
+//H5+
+// 监听plusready事件  
+document.addEventListener("plusready", function() {
+	// 扩展API加载完毕，现在可以正常调用扩展API
+	plus.key.addEventListener("backbutton", function() {
+		if(!ROOT_APP.back()) {
+			plus.runtime.quit();
+		}
+	});
+}, false);
