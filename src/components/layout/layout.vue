@@ -44,7 +44,7 @@
 <style lang="less" scoped>
 	.header-box {
 		height: 46px;
-		background: RGB(46, 44, 44);
+		background: RGB(53,73,94);
 		span {
 			float: left;
 			line-height: 46px;

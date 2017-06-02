@@ -7,6 +7,7 @@
 					<span class="index-regist">注册</span>
 				</div>
 			</div>
+			<label>English</label>
 		</div>
 	</div>
 </template>
@@ -36,7 +37,8 @@
 					padding: 5px 30px;
 					color: white;
 					font-size: 1rem;
-					margin:1rem;
+					margin:2rem;
+					border-radius: 2px;
 				}
 				.index-regist {
 					float: right;
@@ -44,9 +46,17 @@
 					padding: 5px 30px;
 					color: black;
 					font-size: 1rem;
-					margin:1rem;
+					margin:2rem;
+					border-radius: 2px;
 				}
 			}
+		}
+		label{
+			position:absolute;
+			top:1rem;
+			right:1rem;
+			color:white;
+			font-size: 1rem;
 		}
 	}
 </style>

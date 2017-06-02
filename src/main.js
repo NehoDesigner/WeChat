@@ -37,7 +37,9 @@ import { IndexList, IndexSection, Cell } from 'mint-ui';
 Vue.component(IndexList.name, IndexList);
 Vue.component(IndexSection.name, IndexSection);
 Vue.component(Cell.name, Cell);
-
+//vux
+import  { ConfirmPlugin } from 'vux'
+Vue.use(ConfirmPlugin)
 /* eslint-disable no-new */
 window.ROOT_APP = new Vue({
 	router,
@@ -46,7 +48,7 @@ window.ROOT_APP = new Vue({
 		login: function(value) {
 			sessionHelper.setToken(value);
 			this.$store.dispatch('loginStatus', true);
-			this.goto('/index');
+			this.goto('/chat');
 		},
 		logout: function() {
 			localStorage.clear();
@@ -57,7 +59,7 @@ window.ROOT_APP = new Vue({
 	created: function() {
 		if(sessionHelper.isOnline()) {
 			this.$store.dispatch('loginStatus', true);
-			this.goto('/index');
+			this.goto('/chat');
 		}
 	},
 	render: h => h(App)

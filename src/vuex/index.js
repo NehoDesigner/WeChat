@@ -7,8 +7,11 @@ Vue.use(Vuex)
 
 const state = {
 	//用户状态
-	loginStatus:false
+	loginStatus:false,
+	//应用状态
+	netLoading:false
 };
+window.ROOT_STATE = state;
 export default new Vuex.Store({
   state,
   mutations,

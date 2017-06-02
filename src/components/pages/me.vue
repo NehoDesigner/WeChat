@@ -36,6 +36,14 @@
 					</div>
 				</div>
 			</div>
+			<div class="me-item" @click="goto('/setting')">
+				<div class="item-left">
+					<i class="iconfont">&#xe61a;</i>
+				</div>
+				<div class="item-right">
+					<span>设置</span>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>

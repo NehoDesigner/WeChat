@@ -16,11 +16,17 @@ export const routes = [{
 			next();
 		}
 	}
-},{
+}, {
 	name: 'login',
 	path: '/login',
 	component: (resolve) => {
 		require(['../components/pages/login.vue'], resolve)
+	}
+},{
+	name: 'setting',
+	path: '/setting',
+	component: (resolve) => {
+		require(['../components/pages/me/setting.vue'], resolve)
 	}
 },{
 	name: 'layout',
@@ -37,7 +43,7 @@ export const routes = [{
 		meta: {
 			routeLevel: 1
 		}
-	},{
+	}, {
 		name: 'contact',
 		path: '/contact',
 		component: (resolve) => {
@@ -46,7 +52,7 @@ export const routes = [{
 		meta: {
 			routeLevel: 1
 		}
-	},{
+	}, {
 		name: 'explore',
 		path: '/explore',
 		component: (resolve) => {
@@ -55,7 +61,7 @@ export const routes = [{
 		meta: {
 			routeLevel: 1
 		}
-	},{
+	}, {
 		name: 'me',
 		path: '/me',
 		component: (resolve) => {

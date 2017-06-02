@@ -8,7 +8,7 @@ export default {
 		// 请求方法同上
 		method: 'post', // default
 		// 基础url前缀
-		baseURL: 'http://localhost:90/',
+		baseURL: 'http://192.168.0.109:90/',
 
 		transformRequest: [function(data) {
 			// 这里可以在发送请求之前对请求数据做处理

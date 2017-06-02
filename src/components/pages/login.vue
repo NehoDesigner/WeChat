@@ -18,7 +18,7 @@
 						<span>+86</span>
 					</div>
 					<div class="item-right">
-						<input type="text" placeholder="你的手机号码" />
+						<input type="text" placeholder="你的手机号码" v-model="user.account" />
 					</div>
 				</div>
 				<div class="box-item">
@@ -26,7 +26,7 @@
 						<span>密码</span>
 					</div>
 					<div class="item-right">
-						<input type="password" placeholder="填写密码" />
+						<input type="password" placeholder="填写密码" v-model="user.psw" />
 					</div>
 				</div>
 				<div class="login-submit" @click="userLogin()">
@@ -36,19 +36,50 @@
 					<span>用短信验证码登陆</span>
 				</div>
 			</div>
+			<toast v-model="toast.show" type="text" :time="800" is-show-mask :text="toast.text" :position="toast.position"></toast>
 		</div>
 	</div>
 </template>
 
 <script>
-	import { XHeader } from 'vux'
+	import { XHeader,Toast } from 'vux'
 	export default {
-		components: {
-			XHeader
+		data() {
+			return {
+				user: {
+					account: '',
+					psw: ''
+				},
+				toast:{
+					show:false,
+					text:'填写完整账号信息',
+					position:'middle'
+				}
+			}
 		},
-		methods:{
-			userLogin:function(){
-				this.goto('/chat');
+		components: {
+			XHeader,
+			Toast
+		},
+		methods: {
+			userLogin: function() {
+				if(this.user.account == '' || this.user.psw == '') {
+					this.toast.show = true
+				} else {
+					const _self = this;
+					let data = {
+						account: this.user.account,
+						psw: this.user.psw
+					}
+					httpService.login(data, function(res) {
+						if(res.success == true){
+							ROOT_APP.login(res.token);
+						}else{
+							_self.toast.show = true;
+							_self.toast.text = '密码错误';
+						}
+					});
+				}
 			}
 		}
 	}
