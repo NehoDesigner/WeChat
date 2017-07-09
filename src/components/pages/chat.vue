@@ -6,7 +6,7 @@
 					<img src="../../assets/vux_logo.png">
 				</div>
 				<div class="item-right">
-					<label>吴倩婷</label>
+					<label>fatting</label>
 					<p>我玩的时候看到你在线就拉你</p>
 				</div>
 				<i>昨天</i>

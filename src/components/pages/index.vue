@@ -34,7 +34,7 @@
 				.index-login {
 					float: left;
 					background: RGB(0, 255, 0);
-					padding: 5px 30px;
+					padding: 7px 40px;
 					color: white;
 					font-size: 1rem;
 					margin:2rem;
@@ -43,7 +43,7 @@
 				.index-regist {
 					float: right;
 					background: RGB(255, 252, 245);
-					padding: 5px 30px;
+					padding: 7px 40px;
 					color: black;
 					font-size: 1rem;
 					margin:2rem;

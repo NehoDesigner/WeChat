@@ -19,7 +19,7 @@ export default {
   },
   computed:{
   	show:function(){
-  		return this.$store.state.netLoading;
+  		return this.$store.state.status.callBackStatus;
   	}
   }
 }

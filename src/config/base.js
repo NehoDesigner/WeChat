@@ -8,7 +8,7 @@ export default {
 		// 请求方法同上
 		method: 'post', // default
 		// 基础url前缀
-		baseURL: window.ENV === 'dev' ? 'http://192.168.0.109:90/' : 'http://wqt.trade/',
+		baseURL: window.ENV === 'dev' ? 'http://localhost:90/' : 'http://wqtserver.gz01.bdysite.com/',
 
 		transformRequest: [function(data) {
 			// 这里可以在发送请求之前对请求数据做处理
