@@ -4,9 +4,9 @@ import service from "../base/service"
 
 export default{
   login:function(params,callback){
-    service.post("/user/query",params,callback)
+    service.post("/users/login",params,callback)
   },
   regist:function(params,callback){
-    service.post("/user/addUser",params,callback)
+    service.post("/users/addUser",params,callback)
   }
 }

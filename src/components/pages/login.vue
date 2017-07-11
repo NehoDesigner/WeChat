@@ -73,7 +73,8 @@
 					}
 					httpService.login(data, function(res) {
 						if(res.success == true){
-							ROOT_APP.login(res.token);
+							console.log(res)
+							ROOT_APP.login(res.data);
 						}else{
 							_self.toast.show = true;
 							_self.toast.text = '密码错误';
